@@ -33,4 +33,5 @@ EOF
 
 if [[ ${1} != "slurm" ]]; then
     deepspeed --module $training_commands
+    # deepspeed --module --include=localhost:0,1,2,3,4,5,6,7 $training_commands
 fi
